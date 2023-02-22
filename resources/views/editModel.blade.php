@@ -55,26 +55,40 @@
         <div class="image"></div>
     </div>
     <div class="edit">
-        <form action="">
+        <form action="/model/enviar" method="post">
+        @csrf
+
+            <div class="edit-line">
+                <p>Data:</p>
+                <input name="data" id="" cols="20" rows="3"/>
+            </div>
+            <div class="edit-line">
+                <p>Peticionário:</p>
+                <input name="peticionario" id="" cols="20" rows="3"/>
+            </div>
+            <div class="edit-line">
+                <p>Natureza:</p>
+                <input name="natureza" id="" cols="20" rows="3"/>
+            </div>
             <div class="edit-line">
                 <p>Linha 1:</p>
                 <textarea name="linha1" id="" cols="20" rows="3"></textarea>
             </div>
             <div class="edit-line">
-                <p>Linha 1:</p>
-                <textarea name="linha1" id="" cols="30" rows="3"></textarea>
+                <p>Linha 2:</p>
+                <textarea name="linha2" id="" cols="30" rows="3"></textarea>
             </div>
             <div class="edit-line">
-                <p>Linha 1:</p>
-                <textarea name="linha1" id="" cols="30" rows="3"></textarea>
+                <p>Linha 3:</p>
+                <textarea name="linha3" id="" cols="30" rows="3"></textarea>
             </div>
             <div class="edit-line">
-                <p>Linha 1:</p>
-                <textarea name="linha1" id="" cols="30" rows="3"></textarea>
+                <p>Linha 4:</p>
+                <textarea name="linha4" id="" cols="30" rows="3"></textarea>
             </div>
             <div class="edit-line">
-                <p>Linha 1:</p>
-                <textarea name="linha1" id="" cols="30" rows="3"></textarea>
+                <p>Linha 5:</p>
+                <textarea name="linha5" id="" cols="30" rows="3"></textarea>
             </div>
             <input type="submit" value="Gerar Documento">
 

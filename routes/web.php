@@ -23,7 +23,8 @@ Route::get('/editModel/{id}', function($id){
     return view('/editModel', ['id' => $id]);
 });
 
-Route::get('/model/{id}', [PdfController::class, 'createPdf'])->middleware(['auth']);
+Route::get('/model', [PdfController::class, 'createPdf'])->middleware(['auth']);
+Route::post('/model/enviar', [PdfController::class, 'createPdf'])->middleware(['auth']);
 
 Route::middleware([
     'auth:sanctum',
