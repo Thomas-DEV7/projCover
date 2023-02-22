@@ -33,17 +33,17 @@
         <div class="models">
             <p>modelo 1</p>
             <div class="image"></div>
-            <a href="/model/1">Editar modelo</a>
+            <a href="/editModel/1">Editar modelo</a>
         </div>
         <div class="models">
             <p>modelo 2</p>
             <div class="image"></div>
-            <a href="/model/2">editar modelo</a>
+            <a href="/editModel/2">Editar modelo</a>
         </div>
         <div class="models">
             <p>modelo 3</p>
             <div class="image"></div>
-            <a href="/model/2">editar modelo</a>
+            <a href="/editModel/2">Editar modelo</a>
         </div>
     </div>
 </x-app-layout>

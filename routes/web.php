@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/model/{id}', function($id){
-    return view('/model', ['id' => $id]);
+Route::get('/editModel/{id}', function($id){
+    return view('/editModel', ['id' => $id]);
 });
+
+Route::get('/model/{id}', [PdfController::class, 'createPdf'])->middleware(['auth']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
