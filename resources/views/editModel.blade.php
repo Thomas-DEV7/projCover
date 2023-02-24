@@ -1,4 +1,9 @@
 <style>
+    *{
+        margin: 0;
+        font-family: sans-serif;
+
+    }
     .image{
         height: 300px;
         width: 200px;
@@ -8,10 +13,17 @@
         display: flex;
         gap: 15px;
     }
+    header{
+        background-color: #f5f5f5;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 </style>
-
 <!-- RENDERIZAÇÃO CONDICIONAL (ID NA URL) -->
-<h1>Editar documento</h1><hr>
+<header>
+    <h1>Edição de PDF</h1>
+</header>
 @if($id == 1)
     <!-- Renderiza o modelo 1 -->
     <main>

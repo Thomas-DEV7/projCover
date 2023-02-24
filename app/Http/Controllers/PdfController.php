@@ -22,19 +22,24 @@ class PdfController extends Controller
         $linha5=$request->input('linha5');
         $dompdf->loadHtml
         ('
+            <style>
+                P{
+                    font-size:15px;
+                }   
+            </style>
             <h1>Titulo do PDF</h1>
             <p>Segunda linha</p>
             <hr>'.
-            '<h3>'.
-            $data.'<br>'.
-            $peticionario.'<br>'.
-            $natureza.'<br>'.
-            '</h3><br><br>'.
-            '<p>'.$linha1.'<br>'
-            .$linha2.'<br>'
-            .$linha3.'<br>'
-            .$linha4.'<br>'
-            .$linha5. '</p>'.
+            '<p>'.
+            'Data:'.$data.'<br><br>'.
+            'Peticionário: '.$peticionario.'<br><br>'.
+            'Natureza:'.$natureza.'<br><br>'.
+            '</p><br><br>'.
+            '<p>'.$linha1.'<br><br>'
+            .$linha2.'<br><br>'
+            .$linha3.'<br><br>'
+            .$linha4.'<br><br>'
+            .$linha5. '</p><br><br>'.
             '<p>Informações estáticas</p>
         ');
         $dompdf->set_option('isHtml5ParserEnabled', true);
