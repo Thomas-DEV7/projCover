@@ -83,6 +83,10 @@
                 <input name="natureza" id="" cols="20" rows="3"/>
             </div>
             <div class="edit-line">
+                <p>Saudações:</p>
+                <input name="saudacao" id="" cols="20" rows="3"/>
+            </div>
+            <div class="edit-line">
                 <p>Linha 1:</p>
                 <textarea name="linha1" id="" cols="20" rows="3"></textarea>
             </div>

@@ -16,15 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
-
+// Edita o PDF
 Route::get('/editModel/{id}', function($id){
     return view('/editModel', ['id' => $id]);
 });
-
+//Gera o PDF
 Route::get('/model', [PdfController::class, 'createPdf'])->middleware(['auth']);
 Route::post('/model/enviar', [PdfController::class, 'createPdf'])->middleware(['auth']);
+
 
 Route::middleware([
     'auth:sanctum',

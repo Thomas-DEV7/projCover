@@ -15,6 +15,7 @@ class PdfController extends Controller
         $data=$request->input('data');
         $peticionario=$request->input('peticionario');
         $natureza=$request->input('natureza');
+        $saudacao=$request->input('saudacao');
         $linha1=$request->input('linha1');
         $linha2=$request->input('linha2');
         $linha3=$request->input('linha3');
@@ -23,10 +24,16 @@ class PdfController extends Controller
         $dompdf->loadHtml
         ('
             <style>
-                P{
+                p{
                     font-size:15px;
+                    margin-left: 20px
+                }
+                p.paragrafo{
+                    font-size:15px;
+                    text-indent: 40px
                 }   
             </style>
+            
             <h1>Titulo do PDF</h1>
             <p>Segunda linha</p>
             <hr>'.
@@ -34,8 +41,10 @@ class PdfController extends Controller
             'Data:'.$data.'<br><br>'.
             'Peticionário: '.$peticionario.'<br><br>'.
             'Natureza:'.$natureza.'<br><br>'.
-            '</p><br><br>'.
-            '<p>'.$linha1.'<br><br>'
+            '</p><br><br>'.'<p>'.
+            $saudacao.'</p>'.
+            '<br><br>'.
+            '<p class"paragrafo">'.$linha1.'<br><br>'
             .$linha2.'<br><br>'
             .$linha3.'<br><br>'
             .$linha4.'<br><br>'
@@ -50,5 +59,7 @@ class PdfController extends Controller
                            
         return $dompdf->stream('/model');
         
+        // <img src="https://meueb2niw.com.br/wp-content/uploads/2022/12/Design_sem_nome-removebg-preview.png">
+        //Deu erro quando tentei integrar ao PDF.
     }
 }
